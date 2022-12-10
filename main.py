@@ -1,4 +1,5 @@
 import doors as d
+import time
 from art import tprint
 
 tprint("DOORS")
