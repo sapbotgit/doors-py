@@ -2,8 +2,8 @@ from art import tprint
 import time
 def door():
     print("Это не доработано")
+    
 def doors():
-    door = 0
     print("Добро пожаловать в DOORS...")
     time.sleep(3)
     door()
