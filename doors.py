@@ -6,7 +6,7 @@ rooms = ['EmptyRoom']
 glitches = 0
 def door(a):
     glitch = False
-    tprint(string(a))
+    tprint(str(a))
     if a == 1:
         print('Перед вами ключ... вы его берёте и подходите к двери...')
     else:
