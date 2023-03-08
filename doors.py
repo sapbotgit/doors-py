@@ -1,17 +1,37 @@
 from art import tprint
-import time, random
+import time, random, sys
 
 random.seed(1)
-rooms = ['EmptyRoom']
+rooms = ['Glitch']
 glitches = 0
 def door(a):
     glitch = False
     tprint(str(a))
     if a == 1:
         print('Перед вами ключ... вы его берёте и подходите к двери...')
+    elif a == 50:
+        print('''Пароль состоиз из 5 цифр
+1 - Это треугольник
+2 - Квадрат
+3 - Круг
+4 - Ромб
+5 - Крест
+
+Квадрат это 6
+Треугольник это 9
+Круг это 5
+Ромб это 2
+Крест это 1
+
+Какой пароль?''')
+        if input('Пароль: ') == '96321':
+            print('Поздравляю вы выжили!')
+        else:
+            print('Вы ввели неверный пароль')
+            over('Figure')
     else:
-        room = random.choice(rooms)
-        if room == 'EmptyRoom':
+        rm = random.choice(rooms)
+        if rm == 'EmptyRoom':
             print('Вам повезло! Эта комната пустая и тут никого нет!')
         else:
             print('Ох что-то пошло не так и вас телепортировал глитч!')
@@ -47,4 +67,5 @@ def over(monster):
         print('Не бойтесь! Вы никак не влияли на него. Это - ошибка игры...')
     else:
         print('Странно... вас убил монстр которого не существует...')
-        
+        input('Нажмите Enter тобы выйти...')
+        sys.exit()
